@@ -1,0 +1,17 @@
+<p>
+  <strong>book NAME:</strong>
+  <%= @book.title %>
+</p>
+ 
+<p>
+  <strong>AUTHOR:</strong>
+  <%= @book.author %>
+</p>
+<p>
+  <strong>DESCRIPTION:</strong>
+  <%= @book.description %>
+</p>
+
+<table>
+<th><%= button_to 'Edit', edit_book_path(@book), :method => "get" %></th>
+<th><%= button_to 'Back', books_path, :method => "get" %></th>
