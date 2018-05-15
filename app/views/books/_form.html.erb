@@ -13,24 +13,31 @@
       </ul>
     </div>
   <% end %>
+
  
-<p>
-  <%= form.label :Title %><br>
-  <%= form.text_field :title %>
-</p> 
-
-<p>
-  <%= form.label :Author %><br>
-  <%= form.text_area :author %>
-</p>
-
-<p>
-  <%= form.label :Description %><br>
-  <%= form.text_area :description %>
-</p>
-
-<p>
-    <%= form.submit :update %>
-</p>
-
+<fieldset>
+<legend><strong>TITLE:</strong></legend>
+<%= form.text_field :title %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>AUTHOR:</strong></legend>
+<%= form.text_field :author %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>DESCRIPTION:</strong></legend>
+<%= form.text_area :description %>
+<br>
+</fieldset>
+</fieldset>
+<br>
+<table class="table1">
+<th><%= form.submit :CREATE, :class => "studlink" %></th>
 <% end %>
+
+<th><%= button_to 'BACK', books_path, :method => "get", :class => "studlink" %></th>
+</table>
+<br>

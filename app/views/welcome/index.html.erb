@@ -1,9 +1,18 @@
 <center>
 <br>
 <hr />
+<div class="welcome">
   <h1><big>UNIVERSITY LIBRARY</big></h1>
+</div>
 <hr />
-<br>
-    <h1><%= link_to 'BOOKS', controller: 'books' %></h1>
-    <h1><%= link_to 'STUDENTS', controller: 'students' %></h1>
+
+<div><%= button_to "BOOKS", books_path, :method => "get", :class => "boxes b1" %>
+<%= button_to "STUDENTS", students_path, :method => "get", :class => "boxes b2" %>
+</div>
 </center>
+<hr />
+<div align="right">
+Developed By,<br>
+Abhinav K Subramanian<br>
+Honey Johny
+</div>

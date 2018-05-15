@@ -12,20 +12,24 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <link href='https://fonts.googleapis.com/css?family=Viga' rel='stylesheet'>
+
+    <link href='https://fonts.googleapis.com/css?family=Salsa' rel='stylesheet'>
+
+    
   </head>
 
 
   <body>
-    <br>
-    <table>
-    <tr>
-    <th><%= button_to "HOME", root_path, :method => "get" %></th>
-    <th><%= button_to "BOOKS", books_path, :method => "get" %></th>
-    <th><%= button_to "STUDENTS", students_path, :method => "get" %></th>
-    </tr>
-    </table>
-    <%= yield %>
-
-  </body>
-
+<div class="navbar">
+<div class="btn-group">
+  <%= button_to "HOME", root_path, :method => "get", :class => "buttons" %>
+  <%= button_to "BOOKS", books_path, :method => "get", :class => "buttons" %>
+  <%= button_to "STUDENTS", students_path, :method => "get", :class => "buttons" %>
+</div>
+</div>
+<br>
+<br>
+<%= yield %>
+</body>
 </html>

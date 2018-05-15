@@ -1,18 +1,30 @@
-<p>
-  <strong>NAME:</strong>
-  <%= @student.name %>
-</p>
+<br>
+<fieldset>
+<legend class="students">STUDENT DETAILS</legend>
 
-<p>
-  <strong>SECTION:</strong>
-  <%= @student.section %>
-</p>
+<fieldset>
+<legend><strong>NAME:</strong></legend>
+<%= @student.name %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>SECTION:</strong></legend>
+<%= @student.section %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>ADDRESS:</strong></legend>
+<%= @student.address %>
+<br>
+</fieldset>
+</fieldset>
+<br>
 
-<p>
-  <strong>ADDRESS:</strong>
-  <%= @student.address %>
-</p>
-
-<table>
-<th><%= link_to 'EDIT', edit_student_path(@student) %></th>
-<th><%= link_to 'BACK', students_path %></th>
+<table class="table1">
+<th><%= button_to 'EDIT', edit_student_path(@student), :method => "get", :class => "studlink" %></th>
+<th><%= button_to 'DELETE', student_path(@student), :method => "delete", :data => { confirm: 'ARE YOU SURE?' }, :class => "studlink" %></th>
+<th><%= button_to 'BACK', students_path, :method => "get", :class => "studlink" %></th>
+</table>
+<br>

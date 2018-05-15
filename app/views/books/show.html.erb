@@ -1,17 +1,59 @@
-<p>
-  <strong>book NAME:</strong>
-  <%= @book.title %>
-</p>
- 
-<p>
-  <strong>AUTHOR:</strong>
-  <%= @book.author %>
-</p>
-<p>
-  <strong>DESCRIPTION:</strong>
-  <%= @book.description %>
-</p>
+<br>
+<fieldset>
+<legend class="students">BOOK DETAILS</legend>
 
-<table>
-<th><%= button_to 'Edit', edit_book_path(@book), :method => "get" %></th>
-<th><%= button_to 'Back', books_path, :method => "get" %></th>
+<fieldset>
+<legend><strong>TITLE:</strong></legend>
+<%= @book.title %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>AUTHOR:</strong></legend>
+<%= @book.author %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>DESCRIPTION:</strong></legend>
+<%= @book.description %>
+<br>
+</fieldset>
+<br>
+<fieldset>
+<legend><strong>BOOK STATUS:</strong></legend>
+<% if @book.student %>
+Borrowed by : <%= link_to @book.student.name,  student_path(@book.student), :class => "stud" %>
+<br>
+<br>
+<table class="table2">
+  <tr>
+    <th>Borrowed on</th>
+    <th>Days Held</th>
+    <th>Days Left</th>
+    <th>Return Date</th>
+  </tr>
+  <tr>
+    <td><%= @book.borrowed_on %></td>
+    <td><%= @book.days_borrowed %></td>
+    <td><%= @book.days_remaining %></td>
+    <td><%= @book.return_on %></td>
+  </tr>
+</table>
+<br>
+<% else %>
+<div class="stud">Available</div>
+<% end %>
+
+</fieldset>
+
+
+</fieldset>
+<br>
+
+<table class="table1">
+<th><%= button_to 'EDIT', edit_book_path(@book), :method => "get", :class => "studlink" %></th>
+<th><%= button_to 'DELETE', book_path(@book), :method => "delete", :data => { confirm: 'ARE YOU SURE?' }, :class => "studlink" %></th>
+<th><%= button_to 'BACK', books_path, :method => "get", :class => "studlink" %></th>
+</table>
+<br>

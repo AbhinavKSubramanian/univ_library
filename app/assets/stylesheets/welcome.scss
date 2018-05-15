@@ -1,3 +1,58 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcome {
+  font-family: 'Viga';
+  font-size: 40px;
+  text-shadow: 1.5px -1px white;
+  border: 2px solid black;
+  background-image: url('lib.png');
+  border-radius: 4px;
+ }
+
+.boxes {
+    font-family: 'Salsa';
+    width: 50%;
+    height: 200px;
+    padding: 30px 30px;
+    border: 2px solid black;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 2px 1px black;
+    background-repeat: no-repeat;
+    background-color: white;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.b1 {
+    background-image: url('books.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.b1:hover {
+    background-color:rgba(153,217,234,1);
+    background-image: url('bookshover.png');
+    color: black;
+    text-shadow: 2px 1px yellow;
+}
+
+.b2 {
+    background-image: url('students.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.b2:hover {
+    background-color:rgba(153,217,234,1);
+    background-image: url('studentshover.png');
+    color: black;
+    text-shadow: 2px 1px yellow;
+}

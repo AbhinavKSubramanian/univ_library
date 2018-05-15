@@ -1,3 +1,131 @@
 // Place all the styles related to the Students controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.students {
+  font-family: 'Viga';
+  padding: 0px 0px;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1.5px -1px white;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: lightgreen;
+  decorations: none;
+ }
+
+table.table1 {
+    border-collapse: collapse;
+    width: 100%;
+    table-align: left;    
+}
+
+table.table1 {
+    border: 3px solid black;
+    
+}
+
+table.table1 th {
+    width: 33.33%;
+    border: 3px solid black;
+    background-color: lightblue;
+    font-family: 'Salsa';
+    font-size: 25px;
+}
+
+table.table1 td {
+    font-family: 'Viga';
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+table.table1 tr:hover {
+    background-color: lightgray;
+}
+
+.studlink {
+    font-family: 'Viga';
+    font-size: 20px;
+    width: 100%;
+    padding: 2px;
+    background-color: white;
+    border: none;
+    display: inline;
+}
+
+.studlink:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.back {
+    font-family: 'Salsa';
+    width: 140px;
+    border: 2px solid black;
+    padding: 5px;
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: lightgray;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 4px;
+    text-align: left;
+}
+
+.tooltip {
+    position: relative;
+    display: inline;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    font-size: 14px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: 0%;
+    margin-left: 0px;
+    opacity: 0;
+    transition: opacity .5s linear 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin-left: 0px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+fieldset {
+    font-family: 'Viga';
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: lightcyan;
+}
+
+legend {
+    font-family: 'Salsa';
+    font-size: 30px;
+    font-weight: bold;
+}
